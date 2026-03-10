@@ -22,3 +22,4 @@ n x PiicoDev Button https://core-electronics.com.au/piicodev-button.html (recomm
 1 x USB A 2.0 Male to Male cable (keep it short)<br>
 1 x micro SD card (at least 4 GB)<br>
 1 x Pi Zero 2 W Case (optional)  [(example)](https://core-electronics.com.au/slim-case-for-raspberry-pi-zero.html)<br>
+1 x PiicoDev OLED Display Module (128x64) SSD1306 (optional) https://core-electronics.com.au/piicodev-oled-display-module-128x64-ssd1306.html
