@@ -13,7 +13,8 @@ This project will give you programable buttons for your **Commodore 64 Ultimate*
 
 **C64U-btn-HAT Hardware**<br>
 1 x Pi Zero 2 W  [(example)](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless-soldered-male-headers.html)<br>
-1 x PiicoDev Adapter for Raspberry Pi [(example)]https://core-electronics.com.au/piicodev-adapter-for-raspberry-pi.html<br>
+1 x PiicoDev Adapter for Raspberry Pi https://core-electronics.com.au/piicodev-adapter-for-raspberry-pi.html<br>
+n x PiicoDev Button https://core-electronics.com.au/piicodev-button.html (recommend configurations of 3, 4 and 6 buttons)
 1 x OTG micro-USB shim  [(example)](https://core-electronics.com.au/tiny-otg-adapter-usb-micro-to-usb.html)<br>
 1 x USB A 2.0 Male to Male cable (keep it short)<br>
 1 x micro SD card (at least 4 GB)<br>
