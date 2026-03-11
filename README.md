@@ -30,3 +30,15 @@ n x PiicoDev Button https://core-electronics.com.au/piicodev-button.html (recomm
 > These instructions assume you already have the C64-Bridge-Project up and running, detailed instructions at
 > https://github.com/brett-olsen/C64-Bridge-Project/edit/main/README.md
 
+<br><br>
+**1) Configure thing**<br>
+
+<br><br>
+**2) Configure thing**<br>
+
+<br><br>
+**3) Configure thing**<br>
+
+<br><br>
+**4) Configure thing**<br>
+
