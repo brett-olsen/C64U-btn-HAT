@@ -32,7 +32,22 @@ n x PiicoDev Button https://core-electronics.com.au/piicodev-button.html (recomm
 > https://github.com/brett-olsen/C64-Bridge-Project/edit/main/README.md
 
 <br><br>
-**1) Configure thing**<br>
+**1) Enable I2C**<br>
+The PiicoDev buttons and display communicate over I2C, to enable I2CC on your Raspberry PI, either:
+
+```
+sudo raspi-config
+```
+
+Navigate to **Interface Options → I2C → Enable**.
+
+Or do it manually — open `/boot/firmware/config.txt` and add these two lines at the bottom:
+
+```
+dtparam=i2c_arm=on
+dtparam=i2c_arm_baudrate=400000
+```
+
 
 <br><br>
 **2) Configure thing**<br>
