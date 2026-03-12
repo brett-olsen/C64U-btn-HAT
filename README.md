@@ -62,7 +62,7 @@ i2cdetect -y 1
 ```
 <br><br>
 
-**2) Configure thing**<br>
+**2) Install the C64U-btn-HAT Project Files**<br>
 
 <br><br>
 **3) Configure thing**<br>
