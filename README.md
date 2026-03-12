@@ -36,7 +36,7 @@ Optional : Access to a 3D printer, to print the button mount or buttons
 
 <br><br>
 **1) Enable I2C**<br>
-The PiicoDev buttons and display communicate over I2C, to enable I2CC on your Raspberry PI, either:
+The PiicoDev buttons and display communicate over I2C, to enable I2CC on your Raspberry PI SSH into your PI, then either:
 
 ```
 sudo raspi-config
