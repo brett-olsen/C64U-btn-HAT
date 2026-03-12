@@ -28,8 +28,8 @@ n x PiicoDev Button https://core-electronics.com.au/piicodev-button.html (recomm
 # Getting it up & running<br><br>
 
 > [!NOTE]
-> These instructions assume you already have the C64-Bridge-Project up and running, detailed instructions at
-> https://github.com/brett-olsen/C64-Bridge-Project/edit/main/README.md
+> These instructions assume you already have the C64-Bridge-Project up and running, detailed instructions at:<br>
+> https://github.com/brett-olsen/C64-Bridge-Project/blob/main/README.md#getting-it-up--running
 
 <br><br>
 **1) Enable I2C**<br>
