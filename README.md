@@ -25,7 +25,7 @@ n x PiicoDev Button https://core-electronics.com.au/piicodev-button.html (recomm
 1 x PiicoDev OLED Display Module (128x64) SSD1306 (optional) https://core-electronics.com.au/piicodev-oled-display-module-128x64-ssd1306.html
 <br><br>
 
-# Getting it up & running<br><br>
+# Getting it up & running
 
 > [!NOTE]
 > These instructions assume you already have the C64-Bridge-Project up and running, detailed instructions at:<br>
