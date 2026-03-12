@@ -53,11 +53,15 @@ dtparam=i2c_arm_baudrate=400000
 sudo usermod -aG i2c "$USER"
 sudo reboot
 ```
+<br>
+After reboot, verify I2C is working. You should see your connected devices listed (typically at address `0x3C` for the display and `0x10`–`0x13` for buttons):
 
-
-
-
+```bash
+sudo apt install -y i2c-tools
+i2cdetect -y 1
+```
 <br><br>
+
 **2) Configure thing**<br>
 
 <br><br>
