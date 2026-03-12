@@ -39,7 +39,8 @@ The PiicoDev buttons and display communicate over I2C, to enable I2CC on your Ra
 sudo raspi-config
 ```
 
-Navigate to **Interface Options → I2C → Enable**. Or do it manually — open `/boot/firmware/config.txt` and add these two lines at the bottom:
+Navigate to **Interface Options → I2C → Enable**.<br>
+Or do it manually — open `/boot/firmware/config.txt` and add these two lines at the bottom:
 
 ```
 dtparam=i2c_arm=on
