@@ -93,7 +93,17 @@ curl
 ```
 <br>
 
+Finally, lets verify your directory structure/files should now look something like this:
 
+```
+/opt/c64_button_daemon/
+├── c64_button_daemon.py
+├── PiicoDev_Switch.py
+├── PiicoDev_Unified.py
+├── PiicoDev_SSD1306.py      ← optional (display)
+└── font-pet-me-128.dat      ← optional (display font)
+```
+<br>
 
 
 <br><br>
