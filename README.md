@@ -89,7 +89,7 @@ curl -LO https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-Unified/m
 
 # Optional: only needed if you have the SSD1306 OLED display
 curl -LO https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-SSD1306-MicroPython-Module/main/PiicoDev_SSD1306.py
-curl 
+curl -LO https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-SSD1306-MicroPython-Module/main/font-pet-me-128.dat
 ```
 <br>
 
