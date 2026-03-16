@@ -114,12 +114,14 @@ nano /opt/c64_button_daemon/c64_button_daemon.py
 ```
 <br>
 Firstly, set the IP Address of your Commodore C64 Ultimate:
+
 ```python
 # Set the IP to the address of your C64 Ultimate
 IP = "192.168.1.64"
 ```
 <br>
 If your wanting to send keystrokes to your Commmodore C64 Ultimate, and have setup the bridge adapter as per the instractions (see https://github.com/brett-olsen/C64-Bridge-Project) then also configure the bridge variables:
+
 ```python
 # Optional: C64 Keyboard Daemon (USB HID Bridge) settings.
 # These can be overridden at runtime via environment variables without editing this file.
