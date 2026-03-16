@@ -79,6 +79,21 @@ Now lets download the main daemon script, this controls the buttons, has all the
 ```bash
 curl -LO https://raw.githubusercontent.com/brett-olsen/C64U-btn-HAT/main/c64_button_daemon.py
 ```
+<br>
+With the main daemon downloaded, lets now download the libraries we need for the project, firstly the PiccoDev button support, then the optional libraries for the SSD1306 OLED display:
+
+```bash
+# Required: button HAT support
+curl -LO https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-Switch-MicroPython-Module/main/PiicoDev_Switch.py
+curl -LO https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-Unified/main/PiicoDev_Unified.py
+
+# Optional: only needed if you have the SSD1306 OLED display
+curl -LO https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-SSD1306-MicroPython-Module/main/PiicoDev_SSD1306.py
+curl 
+```
+<br>
+
+
 
 
 <br><br>
