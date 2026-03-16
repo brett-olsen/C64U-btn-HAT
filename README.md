@@ -103,11 +103,32 @@ Finally, lets verify your directory structure/files should now look something li
 ├── PiicoDev_SSD1306.py      ← optional (display)
 └── font-pet-me-128.dat      ← optional (display font)
 ```
-<br>
-
 
 <br><br>
-**3) Configure thing**<br>
+**3) Configure & Test the Daemon + Buttons**<br>
+
+Open the c64_button_daemon.py script and edit the **CONFIG** section near the top:
+
+```bash
+nano /opt/c64_button_daemon/c64_button_daemon.py
+```
+<br>
+Firstly, set the IP Address of your Commodore C64 Ultimate:
+```python
+# Set the IP to the address of your C64 Ultimate
+IP = "192.168.1.64"
+```
+<br>
+If your wanting to send keystrokes to your Commmodore C64 Ultimate, and have setup the bridge adapter as per the instractions (see https://github.com/brett-olsen/C64-Bridge-Project) then also configure the bridge variables:
+```python
+# Optional: C64 Keyboard Daemon (USB HID Bridge) settings.
+# These can be overridden at runtime via environment variables without editing this file.
+C64KBD_PI_HOST  = os.getenv("C64KBD_PI_HOST", "192.168.1.99")
+C64KBD_PI_PORT  = int(os.getenv("C64KBD_PI_PORT", "9999"))
+C64KBD_TOKEN    = os.getenv("C64KBD_TOKEN", "ILoveMyCommodoreC64")
+```
+<br>
+
 
 <br><br>
 **4) Configure thing**<br>
