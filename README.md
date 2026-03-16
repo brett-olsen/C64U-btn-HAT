@@ -66,6 +66,15 @@ i2cdetect -y 1
 <br><br>
 
 **2) Install the C64U-btn-HAT Project Files**<br>
+Firstly lets create a project folder, set the permisssions and get everything ready for the project files:
+
+```bash
+sudo mkdir -p /opt/c64_button_daemon
+sudo chown -R "$USER":"$USER" /opt/c64_button_daemon
+cd /opt/c64_button_daemon
+```
+<br>
+
 
 <br><br>
 **3) Configure thing**<br>
