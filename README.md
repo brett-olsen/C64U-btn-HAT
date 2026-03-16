@@ -74,6 +74,11 @@ sudo chown -R "$USER":"$USER" /opt/c64_button_daemon
 cd /opt/c64_button_daemon
 ```
 <br>
+Now lets download the main daemon script, this controls the buttons, has all the wrapper functions, communicates with the C64U API's, etc:
+
+```bash
+curl -LO https://raw.githubusercontent.com/brett-olsen/C64U-btn-HAT/main/c64_button_daemon.py
+```
 
 
 <br><br>
