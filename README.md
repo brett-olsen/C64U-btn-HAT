@@ -131,6 +131,40 @@ C64KBD_TOKEN    = os.getenv("C64KBD_TOKEN", "ILoveMyCommodoreC64")
 ```
 <br>
 
+Optionally you can tweak some of the daemon polling settings, for example reducing the POLL_MS value will reduce the CPU time of the daemon, but overall these defaults should be fine:
+```python
+# Daemon polling settings
+POLL_MS = 150           # how often to poll buttons
+HTTP_TIMEOUT_S = 3.0    # network timeout
+RETRIES = 2             # retry count per press if request fails
+RETRY_DELAY_S = 0.2     # retry delay
+COMMAND_TIMEOUT_S = 60  # max seconds for local command threads
+```
+<br>
+
+Lastly, another option before we move on to the actual button configuration, is the optional display settings, set to disabled is the default, but here you can enable/disable the display, setup refresh and, if you like choose a retro inspired screensaver:
+
+```python
+# ---- SSD1306 Display settings -------------------------------------------------------------------
+# Requires PiicoDev_SSD1306.py and font-pet-me-128.dat in the same directory as this script.
+# Set DISPLAY_ENABLED = False to run without a display attached (all display calls become no-ops).
+DISPLAY_ENABLED         = True  # True = use SSD1306 OLED display | False = disable
+DISPLAY_RESULT_S        = 3     # seconds to show button result before returning to idle screen
+DISPLAY_IDLE_REFRESH_S  = 10    # seconds between idle screen clock refreshes (uptime counter)
+
+# ---- Screensaver settings -----------------------------------------------------------------------
+# SCREENSAVER_MODE options:
+#   "off"     — screensaver disabled, idle screen stays on permanently
+#   "blank"   — screen goes dark (best for OLED longevity)
+#   "pacman"  — Pac-Man chomps across the screen eating pellets
+#   "c64logo" — Commodore C= logo bounces around the screen (DVD-style)
+SCREENSAVER_MODE    = "c64logo"  # "off" | "blank" | "pacman" | "c64logo"
+SCREENSAVER_DELAY_S = 600       # seconds idle before screensaver activates (default: 10 minutes)
+SCREENSAVER_FPS     = 8         # animation frames per second (capped by POLL_MS in practice)
+```
+
+
+
 
 <br><br>
 **4) Configure thing**<br>
