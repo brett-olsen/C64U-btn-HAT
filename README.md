@@ -148,7 +148,7 @@ Lastly, another option before we move on to the actual button configuration, is 
 # ---- SSD1306 Display settings -------------------------------------------------------------------
 # Requires PiicoDev_SSD1306.py and font-pet-me-128.dat in the same directory as this script.
 # Set DISPLAY_ENABLED = False to run without a display attached (all display calls become no-ops).
-DISPLAY_ENABLED         = True  # True = use SSD1306 OLED display | False = disable
+DISPLAY_ENABLED         = False # True = use SSD1306 OLED display | False = disable
 DISPLAY_RESULT_S        = 3     # seconds to show button result before returning to idle screen
 DISPLAY_IDLE_REFRESH_S  = 10    # seconds between idle screen clock refreshes (uptime counter)
 
