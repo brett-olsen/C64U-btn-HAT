@@ -120,6 +120,7 @@ Firstly, set the IP Address of your Commodore C64 Ultimate:
 IP = "192.168.1.64"
 ```
 <br>
+
 If your wanting to send keystrokes to your Commmodore C64 Ultimate, and have setup the bridge adapter as per the instractions (see https://github.com/brett-olsen/C64-Bridge-Project) then also configure the bridge variables:
 
 ```python
@@ -296,6 +297,20 @@ Here is a list of the button action examples you can use, there are a couple of 
 #       'run\n'
 #   )
 # ======================================================================================================================
+```
+<br>
+
+If your interested, this is my Button Config that I personally use at the time of writing:
+```python
+# Default 3 button setup
+BUTTON1ACTION: Optional[ActionFn] = menu_button
+BUTTON2ACTION: Optional[ActionFn] = speaker_on_off
+BUTTON3ACTION: Optional[ActionFn] = lights_on_off
+
+# Extended additional 3 button actions (for a total of 6)
+BUTTON4ACTION: Optional[ActionFn] = next_disk()
+BUTTON5ACTION: Optional[ActionFn] = turbo_on_off
+BUTTON6ACTION: Optional[ActionFn] = party_time("/USB1/DEMOSCENE/1337 - Fairlight/1337 - Fairlight - Disk A.d64")
 ```
 <br>
 
