@@ -162,8 +162,39 @@ SCREENSAVER_MODE    = "c64logo"  # "off" | "blank" | "pacman" | "c64logo"
 SCREENSAVER_DELAY_S = 600       # seconds idle before screensaver activates (default: 10 minutes)
 SCREENSAVER_FPS     = 8         # animation frames per second (capped by POLL_MS in practice)
 ```
+<br>
 
+Finally, we can configure the buttons, there are two button related configurations that need checking, the button ID's and the button mappings (which functions the buttons execcute). The button ID's are set via physical DIP switches (if using the PiicoDev Buttons), you can see the button DIP switch configuration in the first part of the BUTTON MAPPING area in the main c64_button_daemon.py file:
+```python
+# ==================================================================================================================================
+# BUTTON MAPPINGS
+#
+# Up to 6 buttons are supported (limited by the number of unique 4-bit DIP switch addresses).
+# Set each BUTTON(n)_ID to the [sw3,sw2,sw1,sw0] DIP switch position on your physical hardware.
+# Set BUTTON(n)ACTION to any action function from the library above, or None to disable that button.
+# TODO: Document the exact DIP switch address scheme in the README with a wiring diagram.
+# TODO: Confirm the real upper limit on daisy-chained PiicoDev buttons and update this comment (assuming some sort of voltage limit)
+#
+# PiicoDev Buttons
+#  [ON         RE]
+#  [─────────────]
+#  [─] [─] [─] [─]
+#  [*] [ ] [ ] [ ]
+#  [ ] [*] [*] [*]
+#  [─] [-] [-] [-]
+#  [1   2   3   4]
+#  [─────────────]
+# DIP Switches match the below button ID configuration
+# ==================================================================================================================================
 
+BUTTON1_ID = [1, 0, 0, 0]
+BUTTON2_ID = [0, 1, 0, 0]
+BUTTON3_ID = [0, 0, 1, 0]
+BUTTON4_ID = [0, 0, 0, 1]
+BUTTON5_ID = [0, 0, 1, 1]
+BUTTON6_ID = [0, 1, 1, 1]
+```
+<br>
 
 
 <br><br>
