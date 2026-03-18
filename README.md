@@ -212,7 +212,7 @@ BUTTON6ACTION: Optional[ActionFn] = None
 ```
 <br>
 
-Here is a list of the button action examples you can use, there are a couple of composite and intelligent functions that I have built ranging from Friday retro fun time like the party_time function, to the incredibly useful intelligent function like next__disk and the handy function turbo_on_off. These functions can easily be extended, linked to new API calls, or tied to other services on the C64 Ultimate to do almost anything :)
+Here is a list of the button action examples you can use, there are a couple of composite and intelligent functions that I have built ranging from Friday retro fun time like the party_time function, to the incredibly useful intelligent function like next__disk and the handy function turbo_on_off. These functions can easily be extended, linked to new API calls, or tied to other services on the C64 Ultimate to do almost anything! I'll be adding more button functions when time permits, usually writing the functions is easy, just need a bit of time for testing =)
 ```python
 # ======================================================================================================================
 #   BUTTON ACTION EXAMPLES — copy/paste any line as a BUTTON(n)ACTION assignment above.
