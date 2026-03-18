@@ -211,9 +211,91 @@ BUTTON6ACTION: Optional[ActionFn] = None
 ```
 <br>
 
-Here is a list of the button action exammples you can use, there are a couple of composite and intelligent functions that I have built ranging from Friday retro fun time like the party_time function, to the incredibly useful intelligent functions like next__disk and turbo_on_off. These functions can easily be extended, linked to new API calls, or tied to other services on the C64 Ultimate :)
+Here is a list of the button action exammples you can use, there are a couple of composite and intelligent functions that I have built ranging from Friday retro fun time like the party_time function, to the incredibly useful intelligent functions like next__disk and the handy turbo_on_off. These functions can easily be extended, linked to new API calls, or tied to other services on the C64 Ultimate to do almost anything :)
 ```python
+# ======================================================================================================================
+#   BUTTON ACTION EXAMPLES — copy/paste any line as a BUTTON(n)ACTION assignment above.
+#
+#   Full API reference: https://1541u-documentation.readthedocs.io/en/latest/api/api_calls.html
+#
+# ---- Disabling a button(s) -------------------------------------------------------------------
+#   BUTTON4ACTION: Optional[ActionFn] = None
+#   BUTTON5ACTION: Optional[ActionFn] = None
+#   BUTTON6ACTION: Optional[ActionFn] = None
 
+#
+# ---- Basic machine control -------------------------------------------------------------------
+#   BUTTON1ACTION = menu_button          # open/close the Ultimate menu (same as the physical button)
+#   BUTTON2ACTION = machine_reset        # soft-reset the C64
+#   BUTTON3ACTION = machine_poweroff     # power off the C64 (U64 only — no HTTP response returned)
+#   BUTTON4ACTION = machine_reboot       # re-initialise cartridge config then reset
+#   BUTTON5ACTION = machine_pause        # pause the C64 (holds DMA line low)
+#   BUTTON6ACTION = machine_resume       # resume after a pause
+#
+# ---- Drive helpers ---------------------------------------------------------------------------
+#   BUTTON4ACTION = drive_reset("a")     # reset drive A (IEC bus ID 8 by default)
+#   BUTTON4ACTION = drive_reset("b")     # reset drive B (IEC bus ID 9)
+#   BUTTON4ACTION = drive_remove("a")    # eject / unmount whatever is in drive A
+#   BUTTON4ACTION = drive_on("a")        # power drive A on
+#   BUTTON4ACTION = drive_off("a")       # power drive A off
+#
+# ---- Mount a disk image ----------------------------------------------------------------------
+#   Paths are as shown in the C64 Ultimate file browser (USB1 = first USB stick, etc.)
+#
+#   BUTTON5ACTION = mount_disk("a", "/USB1/DEMOSCENE/Fairlight/Disk A.d64")
+#   BUTTON5ACTION = mount_disk("a", "/USB1/GAMES/Katakis.d64", mode="readonly")
+#   BUTTON5ACTION = mount_disk("b", "/USB1/GAMES/Turrican II - Disk 2.d64", image_type="d64")
+#   # valid image_type values: d64, g64, d71, g71, d81
+#   # valid mode values:       readwrite (default), readonly, unlinked
+#
+# ---- Auto-advance to the next disk in a series -----------------------------------------------
+#   Queries /v1/drives for the currently mounted image, FTP-lists its directory,
+#   then mounts the next disk in sequence (numeric 1→2 or alpha A→B).
+#   Shows an OLED error if no disk is mounted or the current disk is already the last.
+#
+#   BUTTON4ACTION = next_disk()          # advance drive A to next disk in series
+#   BUTTON4ACTION = next_disk("b")       # advance drive B to next disk in series
+#
+# ---- Play a SID file -------------------------------------------------------------------------
+#   BUTTON4ACTION = sid_play("/USB1/MUSIC/SID/Game Music/1942.sid")
+#   BUTTON4ACTION = sid_play("/USB1/MUSIC/SID/HVSC/D/Drax/Acid.sid", song_nr=2)  # start at sub-tune 2
+#
+# ---- Run a cartridge image -------------------------------------------------------------------
+#   BUTTON4ACTION = run_cart("/USB1/UTIL/Action Replay v6.0 Professional (1989)(Datel).crt")
+#   BUTTON4ACTION = run_cart("/USB1/CARTS/EasyFlash 3.crt")
+#
+# ---- Toggle turbo mode (U64 only) ------------------------------------------------------------
+#   BUTTON5ACTION = turbo_on_off         # first press = ON (64x speed), second press = OFF
+#
+# ---- Toggle LED lighting (U64 only) ----------------------------------------------------------
+#   BUTTON6ACTION = lights_on_off        # toggles LED strip + keyboard lighting on/off
+#
+# ---- Toggle speaker output (U64 only) ---------------------------------------------------------
+#   BUTTON4ACTION = speaker_on_off       # first press = OFF, second press = ON (speaker enable/disable)
+#
+# ---- Party time! (requires C64 Keyboard Daemon) -----------------------------------------------
+#   party_time is a factory function — call it with the disk image path you want to launch:
+#
+#   BUTTON3ACTION = party_time("/USB1/DEMOSCENE/1337 - Fairlight/1337 - Fairlight - Disk A.d64")
+#   BUTTON4ACTION = party_time("/USB1/GAMES/Turrican II - Disk 1.d64")
+#   BUTTON5ACTION = party_time("/USB1/DEMOS/Edge of Disgrace - Disk 1.d64")
+#
+#   Sequence: lights ON → speaker ON (party levels) → mount disk → wait 2s →
+#             LOAD "*",8,1 → wait 5s → RUN
+#   NOTE: Runs all steps in a background thread; OLED shows result immediately.
+#   NOTE: Edit the lights/speaker payloads inside party_time() to match your LED and volume preferences.
+#
+# ---- Send keystrokes via the C64 Keyboard Daemon (USB HID bridge) ----------------------------
+#   Requires the keyboard daemon running on another Pi (see C64KBD_PI_HOST config above).
+#
+#   BUTTON5ACTION = send_keystrokes("run\n")                       # type RUN and press Enter
+#   BUTTON5ACTION = send_keystrokes("load\"*\",8,1\nrun\n")       # load first program and run
+#   BUTTON6ACTION = send_keystrokes(                               # type a short BASIC program
+#       '10 print "i love my commodore";\n'
+#       '20 goto 10\n'
+#       'run\n'
+#   )
+# ======================================================================================================================
 ```
 <br>
 
