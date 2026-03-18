@@ -196,6 +196,20 @@ BUTTON6_ID = [0, 1, 1, 1]
 ```
 <br>
 
+Finally, you can set the button actions. The default is 3 buttons, the first being menu_button, second speaker_on_off and finally the third being lights_on_off. At the moment, I have tested this project with 3, 4 and 6 buttons, conciveably, you could use any number of buttons depending on the voltage demands. To disable a button, simply set Optional[ActionFn] = None, see the default button configuration below:
+
+```python
+# Default 3 button setup
+BUTTON1ACTION: Optional[ActionFn] = menu_button
+BUTTON2ACTION: Optional[ActionFn] = speaker_on_off
+BUTTON3ACTION: Optional[ActionFn] = lights_on_off
+
+# Extended additional 3 button actions (for a total of 6)
+BUTTON4ACTION: Optional[ActionFn] = None
+BUTTON5ACTION: Optional[ActionFn] = None
+BUTTON6ACTION: Optional[ActionFn] = None
+```
+
 
 <br><br>
 **4) Configure thing**<br>
