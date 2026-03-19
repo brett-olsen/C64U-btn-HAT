@@ -332,9 +332,12 @@ BUTTON4ACTION: Optional[ActionFn] = next_disk()
 BUTTON5ACTION: Optional[ActionFn] = turbo_on_off
 BUTTON6ACTION: Optional[ActionFn] = party_time("/USB1/DEMOSCENE/1337 - Fairlight/1337 - Fairlight - Disk A.d64")
 ```
-<br>
-
-
 <br><br>
-**4) Configure thing**<br>
+
+**4) Manual Testing**<br>
+
+
+
+
+**5) Enabling the Service**<br>
 
