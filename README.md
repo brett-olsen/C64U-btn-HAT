@@ -308,7 +308,7 @@ I have tried to document the button functions as best I can, i'll add more comme
 - next_disk
   - I love this function, it first tries to get a listing via FTP, so make sure these services are enabled, then if we can't determine the next disk, or we hit the FTP file length bug on the C64 Ultimate, we perform a "best guess" as to the next disk, I tested this on a variety of disk naming conventions, but let me know if you run into specific filenames that don't work
 - turbo_on_off
-  - this function is a toggle, its hardcoded at 64Mhz, feel free to adjust to suit
+  - this function is a toggle, its hardcoded at 64Mhz, feel free to adjust to suit, I'll think about making an additonal, seperate function which lets your rotate (n) number of CPU speeds =)
 - lights_on_off
   - another toggle, I try not to over-write too many settings here, so it preserves some of the user preferences if possible, you can tweak this function to your needs
 - speaker_on_off
