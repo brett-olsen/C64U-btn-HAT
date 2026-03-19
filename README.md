@@ -299,7 +299,26 @@ Here is a list of the button action examples you can use, there are a couple of 
 #   )
 # ======================================================================================================================
 ```
-<br>
+<br><br>
+I have tried to document the button functions as best I can, i'll add more comments & notes when time permits, a couple of clarifiers for specific button functions follows:
+- machine_reset
++ a handy function, a soft reset but when a cartridge image is loaded and its applicable, this acts as a "freeze" button, works great with carts like the Action Replay series, etc
+- mount_disk
++ just take note of the path, when browsing your C64 Ultimate, and you should be ok, the Ultimate has some quirks with long filenames, spaces should be automatically escaped, not sure about other special characters, but working examples for mount_disk are above
+- next_disk
++ I love this function, it first tries to get a listing via FTP, so make sure these services are enabled, then if we can't determine the next disk, or we hit the FTP file length bug on the C64 Ultimate, we perform a "best guess" as to the next disk, I tested this on a variety of disk naming conventions, but let me know if you run into specific filenames that don't work
+- turbo_on_off
++ this function is a toggle, its hardcoded at 64Mhz, feel free to adjust to suit
+- lights_on_off
++ another toggle, I try not to over-write too many settings here, so it preserves some of the user preferences if possible, you can tweak this function to your needs
+- speaker_on_off
++ same as the other toggles, you can tweak this to your needs also
+- party_time
++ this is totally 100% for fun :D, the function will mount your fav demo, switch on the lights, switch on the speaker, and then manually type the load command on the keyboard, tweak this to your taste, it can take a path for the disk image you want to mount, party on! 
+- BUTTON3COMMAND
++ this is an optional local command to be run on the Raspberry PI, in my case, originally I had button 3 set to machine_poweroff and BUTTON3COMMMAND set to "/usr/bin/sudo /usr/sbin/shutdown -h now", this is a little janky, and may not quite shutdown the Raspberry PI cleanly, i'll review this when I get some time
+<br><br>
+
 
 If your interested, this is my Button Config that I personally use at the time of writing:
 ```python
