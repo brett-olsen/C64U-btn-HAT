@@ -31,12 +31,12 @@ Optional : Access to a 3D printer, to print the button mount or buttons
 # Getting it up & running
 
 > [!NOTE]
-> These instructions assume you already have the C64-Bridge-Project up and running, detailed instructions are located over at:<br>
+> These instructions assume you already have the C64-Bridge-Project up and running, even if you don't want to use the C64-Bridge-Project you can follow the instructions to get your Raspberry Pi Zero up an running, instructions are located over at:<br>
 > https://github.com/brett-olsen/C64-Bridge-Project/blob/main/README.md#getting-it-up--running
 
 <br><br>
 **1) Enable I2C**<br>
-The PiicoDev buttons and display communicate over I2C, to enable I2CC on your Raspberry PI SSH into your PI, then either:
+The PiicoDev buttons and display communicate over I2C, to enable I2C on your Raspberry Pi SSH into your PI, then either:
 
 ```
 sudo raspi-config
@@ -210,7 +210,7 @@ BUTTON6ACTION: Optional[ActionFn] = None
 ```
 <br>
 
-Here is a list of the button action examples you can use, there are a couple of composite and intelligent functions that I have built ranging from Friday retro fun time like the party_time function, to the incredibly useful intelligent function like next__disk and the handy function turbo_on_off. These functions can easily be extended, linked to new API calls, or tied to other services on the C64 Ultimate to do almost anything! I'll be adding more button functions when time permits, usually writing the functions is easy, just need a bit of time for testing =)
+Here is a list of the button action examples you can use, there are a couple of composite and intelligent functions that I have built ranging from Friday retro fun time like the party_time function, to the incredibly useful intelligent function like next_disk and the handy function turbo_on_off. These functions can easily be extended, linked to new API calls, or tied to other services on the C64 Ultimate to do almost anything! I'll be adding more button functions when time permits, usually writing the functions is easy, just need a bit of time for testing =)
 ```python
 # ======================================================================================================================
 #   BUTTON ACTION EXAMPLES — copy/paste any line as a BUTTON(n)ACTION assignment above.
@@ -314,7 +314,7 @@ I have tried to document the button functions as best I can, i'll add more comme
 - party_time
   - this is totally 100% for fun :D, the function will mount your fav demo, switch on the lights, switch on the speaker, and then manually type the load command on the keyboard, tweak this to your taste, it can take a path for the disk image you want to mount, party on! 
 - BUTTON3COMMAND
-  - this is an optional local command to be run on the Raspberry PI, in my case, originally I had button 3 set to machine_poweroff and BUTTON3COMMAND set to "/usr/bin/sudo /usr/sbin/shutdown -h now", this is a little janky, and may not quite shutdown the Raspberry PI cleanly, i'll review this when I get some time
+  - this is an optional local command to be run on the Raspberry Pi, in my case, originally I had button 3 set to machine_poweroff and BUTTON3COMMAND set to "/usr/bin/sudo /usr/sbin/shutdown -h now", this is a little janky, and may not quite shutdown the Raspberry Pi cleanly, i'll review this when I get some time
 <br><br>
 
 
@@ -354,7 +354,7 @@ Ok with all the hard work done, the config all working and tested we can enable 
 sudo nano /etc/systemd/system/c64_button_daemon.service
 ```
 
-In our example, we created and setup the Raspberry PI Zero with the user `c64`, you need to replace this with your username (run `whoami` if unsure):
+In our example, we created and setup the Raspberry Pi Zero with the user `c64`, you need to replace this with your username (run `whoami` if unsure):
 ```ini
 [Unit]
 Description=C64U-btn-HAT (PiicoDev Buttons -> C64 Ultimate API)
@@ -396,7 +396,7 @@ sudo systemctl status c64_button_daemon.service
 
 <br>
 
-**5) Troubleshooting & Useful Commands**<br>
+**6) Troubleshooting & Useful Commands**<br>
 View the live debug logs (follow):
 ```bash
 sudo journalctl -u c64_button_daemon.service -f
