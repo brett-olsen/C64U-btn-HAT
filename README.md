@@ -375,7 +375,7 @@ WantedBy=multi-user.target
 ```
 <br>
 
-Now that is done, we simply need to enabled and start the service, with the following command:
+Now that is done, we simply need to enable and start the service, with the following command:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable --now c64_button_daemon.service
