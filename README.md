@@ -10,7 +10,7 @@ A button HAT for the Raspberry Pi Zero W 2 + Commodore 64 Ultimate, providing 1-
 This project will give you programmable buttons for your **Commodore 64 Ultimate**, super convenient, easily toggle functions of your choice via a quick button press, no more fluffing around in menus! Some examples of the buttons are functions like menu, freeze/reset, lights on & off, speaker on & off, turbo boost and my all personal favourite buttons, party time and mount next disk! Dozens of pre-built functions, easily customisable and extensible, this project will let you do almost anything on your C64U, if paired with the C64-Bridge-Project, you can even send keystrokes to your C64U!<br><br>
 
 > [!NOTE]
-> Best used with the C64-Bridge-Project, see https://github.com/brett-olsen/C64-Bridge-Project<br>
+> Best used with the C64-Bridge-Project, but works super regardless! see https://github.com/brett-olsen/C64-Bridge-Project<br>
 
 <br>
 
@@ -173,8 +173,6 @@ Finally, we can configure the buttons, there are two button related configuratio
 # Up to 6 buttons are supported (limited by the number of unique 4-bit DIP switch addresses).
 # Set each BUTTON(n)_ID to the [sw3,sw2,sw1,sw0] DIP switch position on your physical hardware.
 # Set BUTTON(n)ACTION to any action function from the library above, or None to disable that button.
-# TODO: Document the exact DIP switch address scheme in the README with a wiring diagram.
-# TODO: Confirm the real upper limit on daisy-chained PiicoDev buttons and update this comment (assuming some sort of voltage limit)
 #
 # PiicoDev Buttons
 #  [ON         RE]
