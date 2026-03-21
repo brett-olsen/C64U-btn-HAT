@@ -394,7 +394,9 @@ sudo systemctl status c64_button_daemon.service
 <br><br>
 
 ---
+
 ***Congratulations! You have sucessfully setup the C64U-btn-HAT, I hope this eases some of the friction you might experience with the awesome, but very dense menus on your new Commodore C64 Ultimate =)***
+
 ---
 
 <br>
