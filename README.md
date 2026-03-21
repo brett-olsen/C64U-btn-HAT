@@ -31,7 +31,7 @@ Optional : Access to a 3D printer, to print the button mount or buttons
 # Getting it up & running
 
 > [!NOTE]
-> These instructions assume you already have the C64-Bridge-Project up and running, even if you don't want to use the C64-Bridge-Project you can follow the instructions to get your Raspberry Pi Zero up an running, instructions are located over at:<br>
+> These instructions assume you already have the C64-Bridge-Project up and running, even if you don't want to use the C64-Bridge-Project you can follow the instructions to get your Raspberry Pi Zero up and running, instructions are located over at:<br>
 > https://github.com/brett-olsen/C64-Bridge-Project/blob/main/README.md#getting-it-up--running
 
 <br><br>
