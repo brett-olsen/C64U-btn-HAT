@@ -353,4 +353,40 @@ Now you can test your button configurations, press the buttons and confirm they 
 
 
 **5) Enabling the Service**<br>
+Ok with all the hard work done, the config all working and tested we can enable this now as a daemon so it runs automatically on boot, firstly lets create the service file:
+
+```bash
+sudo nano /etc/systemd/system/c64_button_daemon.service
+```
+
+In our example, we created and setup the Raspberry PI Zero with the user `c64`, you need to replace this with your username (run `whoami` if unsure):
+```ini
+[Unit]
+Description=C64U-btn-HAT (PiicoDev Buttons -> C64 Ultimate API)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=bolsen
+WorkingDirectory=/opt/c64_button_daemon
+ExecStart=/usr/bin/python3 /opt/c64_button_daemon/c64_button_daemon.py
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
+```
+<br>
+
+
+
+
+
+
+
+
+
+
 
