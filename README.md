@@ -394,22 +394,41 @@ sudo systemctl status c64_button_daemon.service
 <br><br>
 
 ---
-
 ***Congratulations! You have sucessfully setup the C64U-btn-HAT, I hope this eases some of the friction you might experience with the awesome, but very dense menus on your new Commodore C64 Ultimate =)***
-
-<br>
-
 ---
 
 <br>
 
 **5) Troubleshooting & Useful Commands**<br>
+View the live debug logs (follow):
+```bash
+sudo journalctl -u c64_button_daemon.service -f
+```
+<br>
 
+View the last (n) log lines:
+```bash
+sudo journalctl -u c64_button_daemon.service -n 30 --no-pager
+```
+<br>
 
+Restart and re-load configuration file changes:
+```bash
+sudo systemctl restart c64_button_daemon.service
+```
+<br>
 
+Stop the C64U-btn-HAT daemon:
+```bash
+sudo systemctl stop c64_button_daemon.service
+```
+<br>
 
-
-
+Check the I2C bus to confirm that the buttons and/or display are detected
+```bash
+i2cdetect -y 1
+```
+<br>
 
 
 
