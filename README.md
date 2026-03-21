@@ -349,9 +349,6 @@ You should see some debug output lines, as follows:
 Now you can test your button configurations, press the buttons and confirm they are all working how you expect, and you don't get any errors on the debug console, when done, you can press `Ctrl+C` to stop.
 <br><br>
 
-
-
-
 **5) Enabling the Service**<br>
 Ok with all the hard work done, the config all working and tested we can enable this now as a daemon so it runs automatically on boot, firstly lets create the service file:
 
@@ -391,7 +388,7 @@ To check that the service is running, which is also handy for troubleshooting, y
 ```bash
 sudo systemctl status c64_button_daemon.service
 ```
-<br><br>
+<br>
 
 ---
 
