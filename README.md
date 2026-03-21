@@ -4,10 +4,10 @@
 
 # C64U-btn-HAT
 
-A button HAT for the Raspberry Pi Zero W 2 + Commodore 64 Ultimate, providing 1-6 programmable buttons (recomended button configs are 3, 4, 5 & 6), using a PiicoDev Adapter for Raspberry Pi/PiicoDev Buttons for easy polling via the I2C bus.<br><br>
+A button HAT for the Raspberry Pi Zero W 2 + Commodore 64 Ultimate, providing 1-6 programmable buttons (recommended button configs are 3, 4, 5 & 6), using a PiicoDev Adapter for Raspberry Pi/PiicoDev Buttons for easy polling via the I2C bus.<br><br>
 
 **What is this Project?**<br>
-This project will give you programable buttons for your **Commodore 64 Ultimate**, super convienient, easily toggle functions of your choice via a quick button press, no more fluffing around in menus! Some examples of the buttons are functions like menu, freeze/reset, lights on & off, speaker on & off, turbo boost and my all personal favourite buttons, party time and mount next disk! Dozens of pre-built functions, easily customisable and extensible, this project will let you do almost anything on your C64U, if paired with the C64-Bridge-Project, you can even send keystrokes to your C64U!<br><br>
+This project will give you programmable buttons for your **Commodore 64 Ultimate**, super convenient, easily toggle functions of your choice via a quick button press, no more fluffing around in menus! Some examples of the buttons are functions like menu, freeze/reset, lights on & off, speaker on & off, turbo boost and my all personal favourite buttons, party time and mount next disk! Dozens of pre-built functions, easily customisable and extensible, this project will let you do almost anything on your C64U, if paired with the C64-Bridge-Project, you can even send keystrokes to your C64U!<br><br>
 
 > [!NOTE]
 > Best used with the C64-Bridge-Project, see https://github.com/brett-olsen/C64-Bridge-Project<br>
@@ -66,7 +66,7 @@ i2cdetect -y 1
 <br><br>
 
 **2) Install the C64U-btn-HAT Project Files**<br>
-Firstly lets create a project folder, set the permisssions and get everything ready for the project files:
+Firstly lets create a project folder, set the permissions and get everything ready for the project files:
 
 ```bash
 sudo mkdir -p /opt/c64_button_daemon
@@ -80,7 +80,7 @@ Now lets download the main daemon script, this controls the buttons, has all the
 curl -LO https://raw.githubusercontent.com/brett-olsen/C64U-btn-HAT/main/c64_button_daemon.py
 ```
 <br>
-With the main daemon downloaded, lets now download the libraries we need for the project, firstly the PiccoDev button support, then the optional libraries for the SSD1306 OLED display:
+With the main daemon downloaded, lets now download the libraries we need for the project, firstly the PiicoDev button support, then the optional libraries for the SSD1306 OLED display:
 
 ```bash
 # Required: button HAT support
@@ -121,7 +121,7 @@ IP = "192.168.1.64"
 ```
 <br>
 
-If your wanting to send keystrokes to your Commmodore C64 Ultimate, and have setup the bridge adapter as per the instractions (see https://github.com/brett-olsen/C64-Bridge-Project) then also configure the bridge variables:
+If your wanting to send keystrokes to your Commodore C64 Ultimate, and have setup the bridge adapter as per the instructions (see https://github.com/brett-olsen/C64-Bridge-Project) then also configure the bridge variables:
 
 ```python
 # Optional: C64 Keyboard Daemon (USB HID Bridge) settings.
@@ -165,7 +165,7 @@ SCREENSAVER_FPS     = 8         # animation frames per second (capped by POLL_MS
 ```
 <br>
 
-Finally, we can configure the buttons, there are two button related configurations that need checking, the button ID's and the button mappings (which functions the buttons execcute). The button ID's are set via physical DIP switches (if using the PiicoDev Buttons), you can see the button DIP switch configuration in the first part of the BUTTON MAPPING area in the main c64_button_daemon.py file:
+Finally, we can configure the buttons, there are two button related configurations that need checking, the button ID's and the button mappings (which functions the buttons execute). The button ID's are set via physical DIP switches (if using the PiicoDev Buttons), you can see the button DIP switch configuration in the first part of the BUTTON MAPPING area in the main c64_button_daemon.py file:
 ```python
 # ==================================================================================================================================
 # BUTTON MAPPINGS
@@ -197,7 +197,7 @@ BUTTON6_ID = [0, 1, 1, 1]
 ```
 <br>
 
-Now you can set the button actions. The default is 3 buttons, the first being menu_button, second speaker_on_off and finally the third being lights_on_off. At the moment, I have tested this project with 3, 4 and 6 buttons, conciveably, you could use any number of buttons depending on the voltage demands. To disable a button, simply set Optional[ActionFn] = None, see the default button configuration below:
+Now you can set the button actions. The default is 3 buttons, the first being menu_button, second speaker_on_off and finally the third being lights_on_off. At the moment, I have tested this project with 3, 4 and 6 buttons, conceivably, you could use any number of buttons depending on the voltage demands. To disable a button, simply set Optional[ActionFn] = None, see the default button configuration below:
 
 ```python
 # Default 3 button setup
@@ -316,7 +316,7 @@ I have tried to document the button functions as best I can, i'll add more comme
 - party_time
   - this is totally 100% for fun :D, the function will mount your fav demo, switch on the lights, switch on the speaker, and then manually type the load command on the keyboard, tweak this to your taste, it can take a path for the disk image you want to mount, party on! 
 - BUTTON3COMMAND
-  - this is an optional local command to be run on the Raspberry PI, in my case, originally I had button 3 set to machine_poweroff and BUTTON3COMMMAND set to "/usr/bin/sudo /usr/sbin/shutdown -h now", this is a little janky, and may not quite shutdown the Raspberry PI cleanly, i'll review this when I get some time
+  - this is an optional local command to be run on the Raspberry PI, in my case, originally I had button 3 set to machine_poweroff and BUTTON3COMMAND set to "/usr/bin/sudo /usr/sbin/shutdown -h now", this is a little janky, and may not quite shutdown the Raspberry PI cleanly, i'll review this when I get some time
 <br><br>
 
 
@@ -392,7 +392,7 @@ sudo systemctl status c64_button_daemon.service
 
 ---
 
-***Congratulations! You have sucessfully setup the C64U-btn-HAT, I hope this eases some of the friction you might experience with the awesome, but very dense menus on your new Commodore C64 Ultimate =)***
+***Congratulations! You have successfully setup the C64U-btn-HAT, I hope this eases some of the friction you might experience with the awesome, but very dense menus on your new Commodore C64 Ultimate =)***
 
 ---
 
