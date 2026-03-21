@@ -368,7 +368,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-User=bolsen
+User=c64
 WorkingDirectory=/opt/c64_button_daemon
 ExecStart=/usr/bin/python3 /opt/c64_button_daemon/c64_button_daemon.py
 Environment=PYTHONUNBUFFERED=1
@@ -380,7 +380,24 @@ WantedBy=multi-user.target
 ```
 <br>
 
+Now that is done, we simply need to enabled and start the service, with the following command:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now c64_button_daemon.service
+```
+<br>
 
+To check that the service is running, which is also handy for troubleshooting, you can issue the following command;
+```bash
+sudo systemctl status c64_button_daemon.service
+```
+<br>
+
+***Congratulations! You have sucessfully setup the C64U-btn-HAT, I hope this eases some of the friction you might experience with the awesome, but very dense menus on your new Commodore C64 Ultimate =)***
+
+<br>
+
+**5) Enabling the Service**<br>
 
 
 
