@@ -335,6 +335,19 @@ BUTTON6ACTION: Optional[ActionFn] = party_time("/USB1/DEMOSCENE/1337 - Fairlight
 <br><br>
 
 **4) Manual Testing**<br>
+Before we setup the python scripts as a service, lets first confirm that everything works, change to the project directory and manually execute the project file:
+
+```bash
+chmod +x /opt/c64_button_daemon/c64_button_daemon.py
+cd /opt/c64_button_daemon
+python3 c64_button_daemon.py
+```
+<br>
+You should see some debug output lines, as follows:
+<img width="1134" height="594" alt="Screenshot_20260321_181419" src="https://github.com/user-attachments/assets/169d67c5-5384-452f-b32f-b1267d5de1ea" />
+<br>
+Now you can test your button configurations, press the buttons and confirm they are all working how you expect, and you don't get any errors on the debug console, when done, you can press `Ctrl+C` to stop.
+<br><br>
 
 
 
