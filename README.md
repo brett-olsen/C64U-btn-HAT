@@ -165,6 +165,10 @@ SCREENSAVER_FPS     = 8         # animation frames per second (capped by POLL_MS
 ```
 <br>
 
+> [!NOTE]
+> If your using the Screensaver, press any button to "wake the device" then press the button you would like to execute<br>
+
+
 Finally, we can configure the buttons, there are two button related configurations that need checking, the button ID's and the button mappings (which functions the buttons execute). The button ID's are set via physical DIP switches (if using the PiicoDev Buttons), you can see the button DIP switch configuration in the first part of the BUTTON MAPPING area in the main c64_button_daemon.py file:
 ```python
 # ==================================================================================================================================
