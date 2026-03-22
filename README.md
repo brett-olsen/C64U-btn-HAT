@@ -336,6 +336,8 @@ BUTTON6ACTION: Optional[ActionFn] = party_time("/USB1/DEMOSCENE/1337 - Fairlight
 ```
 <br><br>
 
+Feel free to suggest any button functions you would like, if you want to start rolling your own, the API reference over at : https://1541u-documentation.readthedocs.io/en/latest/api/api_calls.html is a great place to start!
+
 **4) Manual Testing**<br>
 Before we setup the python scripts as a service, lets first confirm that everything works, change to the project directory and manually execute the project file:
 
